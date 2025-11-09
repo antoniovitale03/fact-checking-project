@@ -1,4 +1,8 @@
+import {Accordion, AccordionDetails, AccordionSummary} from "@mui/material";
+import {useDocumentTitle} from "../../hooks/useDocumentTitle";
+
 export default function Info(){
+    useDocumentTitle("Info");
     return(
         <p>qui mostriamo alcune informazioni sui temi di cui tratta il progetto.
         Ad esempio: cos'è la polarizzazione? cos'è un bias? cos'è la pornografia dell'oltraggio?
@@ -14,6 +18,18 @@ export default function Info(){
             “Cos’è un algoritmo di raccomandazione?”
             “Come i social network amplificano la polarizzazione?”
             “Perché è importante il dubbio nel giornalismo?”
+            <Accordion>
+                <AccordionSummary>Domanda</AccordionSummary>
+                <AccordionDetails>Risposta</AccordionDetails>
+            </Accordion>
+            <Accordion>
+                <AccordionSummary>Domanda</AccordionSummary>
+                <AccordionDetails>Risposta</AccordionDetails>
+            </Accordion>
+            <Accordion>
+                <AccordionSummary>Domanda</AccordionSummary>
+                <AccordionDetails>Risposta</AccordionDetails>
+            </Accordion>
         </p>
     )
 }

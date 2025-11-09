@@ -5,6 +5,7 @@ export default function List(){
             quelle mostrate nella homepage sono create automaticamente nel momento in cui l'utente
             salva il risultato di ricerca tramite URL/parole chiave, quindi c'è una lista di topicCard e una
             di ArticleCard, mentre qui la lista è personalizzata.
+            è possibile eliminare una o più card dalla lista
         </p>
     )
 }

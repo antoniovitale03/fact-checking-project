@@ -8,7 +8,6 @@ export default function SearchBar(){
     const navigate = useNavigate();
     const [query, setQuery] = useState("");
 
-
     // funzione per capire se la query è un URL o meno (parole chiave)
     const isValidUrl = (query) => {
         try {
