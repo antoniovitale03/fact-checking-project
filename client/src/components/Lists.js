@@ -1,21 +1,12 @@
 import {Box} from "@mui/material";
-import DropDownMenu from "./DropDownMenu";
-import CreateNewListForm from "./CreateNewListForm";
-import AddIcon from '@mui/icons-material/Add';
-import {useState} from "react";
+import {useDocumentTitle} from "../hooks/useDocumentTitle";
 
 export default function Lists(){
-
-    const [anchorEl, setAnchorEl] = useState(null);
-    const createNewList = (listName) => setAnchorEl(null);
-
+    useDocumentTitle("Le mie liste");
     return(
         <Box>
             pagina che mostra tutte le liste dell'utente (insieme di listCard)
-            con la possibilità di aggiungere/rimuovere una o più liste
-            <DropDownMenu buttonContent={<><AddIcon />Crea una nuova lista</>}
-                          menuContent={ <CreateNewListForm createNewList={createNewList} /> }
-            anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
+            con la possibilità di rimuovere una o più liste con la X sulla card
         </Box>
     )
 }

@@ -2,6 +2,7 @@ import {AppBar, Avatar, IconButton, Toolbar} from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import SearchBar from "./SearchBar";
 import UserMenu from "./UserMenu";
+import CreateNewList from "./CreateNewList";
 
 export default function Header(){
     const navigate = useNavigate();
@@ -10,6 +11,7 @@ export default function Header(){
            <Toolbar sx={{ display: "flex", flexDirection: 'row', justifyContent: "space-evenly", alignContent: 'center' }}>
                <UserMenu />
                <SearchBar />
+               <CreateNewList />
                <IconButton onClick={ () => navigate("/") }>
                    <Avatar />
                </IconButton>

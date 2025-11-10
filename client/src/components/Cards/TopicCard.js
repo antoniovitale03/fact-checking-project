@@ -1,6 +1,9 @@
+import {Card, CardContent} from "@mui/material";
+
 export default function TopicCard(){
     return(
-        <p>
+        <Card>
+            <CardContent>card di un topic</CardContent>
             mostra ogni ricerca tematica fatta (per parole chiave)
             {/*
             <TopicCard
@@ -11,6 +14,6 @@ export default function TopicCard(){
               onRemove={() => removeFromList(topicId)}
             />
             */}
-        </p>
+        </Card>
     )
 }

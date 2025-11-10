@@ -1,6 +1,11 @@
+import {Card, CardContent} from "@mui/material";
+
 export default function ArticleCard(){
     return(
-        <p>Card che mostra un articolo
+        <Card>
+            <CardContent>
+                card di un articolo
+            </CardContent>
             {/*
             <ArticleCard
                 title="Titolo della notizia"
@@ -14,6 +19,6 @@ export default function ArticleCard(){
             */
             }
 
-        </p>
+        </Card>
     )
 }

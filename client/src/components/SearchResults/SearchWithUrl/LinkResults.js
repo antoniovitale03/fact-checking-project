@@ -3,10 +3,31 @@ import ArticleOverview from "./ArticleOverview";
 import LanguageAnalysis from "./LanguageAnalysis";
 import SourcesComparison from "./SourcesComparison";
 import GeneralValutation from "./GeneralValutation";
-import {Box} from "@mui/material";
+import {Box, Button} from "@mui/material";
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import jsPDF from "jspdf"; //Permette di creare PDF dinamici direttamente da testo e componenti HTML (anche grafici e immagini);
+import html2canvas from "html2canvas"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
+
 
 export default function LinkResults() {
         const link = useSearchParams()[0].get("link");
+
+
+        const exportPDF = async () => {
+            //const element = document.getElementById("analysis-content"); // ID del contenuto da esportare
+            //             const canvas = await html2canvas(element, { scale: 2 });
+            //             const imgData = canvas.toDataURL("image/png");
+            //             const pdf = new jsPDF("p", "mm", "a4");
+            //
+            //             // Adatta l'immagine alla pagina PDF
+            //             const imgProps = pdf.getImageProperties(imgData);
+            //             const pdfWidth = pdf.internal.pageSize.getWidth();
+            //             const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            //
+            //             pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+            //             pdf.save("analisi_factlens.pdf");
+        }
+
     return (
         <Box>{link}
                 componente che mostra i risultati della ricerca fatta dall'utente, nel caso inserisca direttamente
@@ -19,6 +40,7 @@ export default function LinkResults() {
             <GeneralValutation />
             possibilità di salvare l'analisi per poterla aggiungere alla cronologia degli articoli analizzati
                 (articles) e di salvarla in una lista personalizzata o nei preferiti
+            <Button startIcon={<PictureAsPdfIcon />} onClick={exportPDF} variant="contained">Esposta in PDF</Button>
         </Box>
     )
 }

@@ -1,7 +1,7 @@
-export default function TopicOverview(){
+export default function TopicOverview({keywords}){
     return(
         <p>
-            Risultati per " ..... "
+            Risultati per {keywords}
             Breve frase introduttiva con il numero di articoli trovati:
             “Sono stati analizzati 42 articoli da 18 fonti differenti (12 italiane, 6 internazionali).”
             [1] Sintesi generale (overview) (per tutti gli articoli, italiani e non)

@@ -1,4 +1,7 @@
+import {useDocumentTitle} from "../../hooks/useDocumentTitle";
+
 export default function Topics(){
+    useDocumentTitle("Le mie ricerche tematiche");
     return(
         <p>
             lista di tutte le analisi tematiche che l'utente ha salvato (ottenute tramite ricerca

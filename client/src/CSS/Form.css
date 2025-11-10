@@ -1,0 +1,32 @@
+.sfondo {
+    position: relative;
+    background: url("https://i.imgur.com/Abm0wRq.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+.sfondo::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* prende tutta l'area del genitore (sfondo login), equivale a top 0, left 0, bottom 0, right 0 */
+    background: inherit;          /* eredita tutto lo sfondo in un’unica proprietà */
+    filter: blur(8px);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+/* tutti gli elementi dentro il Box con classe sfondo si trovano ad un livello di profondità superiore
+ in questo modo i form non vengono sfocati */
+.sfondo > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* contenitore principale della pagina */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}

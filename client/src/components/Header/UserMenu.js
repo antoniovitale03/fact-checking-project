@@ -1,24 +1,25 @@
 import HomeIcon from "@mui/icons-material/Home";
+import PersonIcon from '@mui/icons-material/Person';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import TopicIcon from '@mui/icons-material/Topic';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import BoltIcon from '@mui/icons-material/Bolt';
 import {Avatar, Box, Divider, ListItemIcon, MenuItem} from "@mui/material";
 import {Link} from "react-router-dom";
 import DropDownMenu from "../DropDownMenu";
 import {useState} from "react";
 
 export default function UserMenu(){
-    const links = ["/", "/lists", "/articles", "/topics"];
-    const names = ["Home", "Le mie liste", "I miei articoli", "Le mie ricerche tematiche"];
-    const icons = [ <HomeIcon />, <FormatListBulletedIcon />, <NewspaperIcon />, <TopicIcon />];
-
+    const links = ["/", "/profile", "/lists", "/articles", "/topics", "/activity"];
+    const names = ["Home", "Il mio profilo", "Le mie liste", "I miei articoli", "Le mie ricerche tematiche", "Le mie attività"];
+    const icons = [ <HomeIcon />, <PersonIcon />,  <FormatListBulletedIcon />, <NewspaperIcon />, <TopicIcon />, <BoltIcon />];
 
     const [anchorEl, setAnchorEl] = useState(null);
 
     const closeMenu = () => setAnchorEl(null);
 
-    const handleLogout = () => {}
+    const handleLogout = () => setAnchorEl(null); //poi aggiungo l'api per il logout
 
     const menu =
         <Box>

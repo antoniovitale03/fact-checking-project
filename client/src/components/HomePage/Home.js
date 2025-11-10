@@ -18,11 +18,14 @@ export default function Home(){
             <SearchBar />
 
             se l'utente è loggato mostro
+            news generali sulla piattaforma, in base alle ricerche fatte dall'utente e dalle tematiche ricercate
             sezione: "ultimi articoli analizzati" (lista di articleCard)
             sezione: "ultime ricerche tematiche fatte" (lista di topicCard)
 
             sezione: "articoli preferiti"
             sezione "topic preferiti"
+
+            Componente “Suggerimenti di lettura”: articoli correlati a quelli salvati o ricerche simili.
 
         </Box>
     )
