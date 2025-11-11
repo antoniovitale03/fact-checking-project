@@ -1,6 +1,6 @@
 .sfondo {
     position: relative;
-    background: url("https://i.imgur.com/Abm0wRq.jpg") center/cover no-repeat;
+    /*background: url("https://i.imgur.com/Abm0wRq.jpg") center/cover no-repeat; */
     overflow: hidden;
 }
 
@@ -22,11 +22,43 @@
 }
 
 /* contenitore principale della pagina */
-.form-container {
+.page-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     min-height: 100vh;
+}
+
+.page-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem;
+    margin-bottom: 3.5rem;
+    border-radius: 8%;
+    min-width: 20vw;
+    background-color: #9c9c9c;
+}
+
+.page-content button {
+    margin-top: 2rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #344e41;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.page-content button:hover {
+    background-color: black;
+}
+
+.forgot-password-link {
+    color: black;
+    cursor: pointer;
 }

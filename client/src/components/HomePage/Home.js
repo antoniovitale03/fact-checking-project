@@ -1,9 +1,17 @@
 import SearchBar from "../Header/SearchBar";
 import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 import {Box} from "@mui/material";
+import {useEffect} from "react";
+import api from "../../api.js"
 
 export default function Home(){
     useDocumentTitle("Home");
+
+    useEffect(() =>{
+        api.get(`http://localhost:8000/api/auth/login`).then(res => console.log(res)).catch(err => console.log(err));
+        }, []
+    )
+
     return(
         <Box>
             Titolo + slogan

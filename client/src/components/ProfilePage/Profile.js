@@ -6,7 +6,6 @@ export default function Profile() {
     useDocumentTitle("Profile");
     return(
         <Box>
-            profilo utente in cui si mostrano le info dell'utente con
             sezione: "ultimi articoli analizzati" (lista di articleCard) -> carosello che riporta alla pagina completa
             sezione: "ultime ricerche tematiche fatte" (lista di topicCard) -> carosello che riporta alla pagina completa
 
