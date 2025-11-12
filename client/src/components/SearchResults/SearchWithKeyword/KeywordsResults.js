@@ -6,9 +6,11 @@ import ArticlesList from "./ArticlesList";
 import LanguageAnalysis from "./LanguageAnalysis";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import {useDocumentTitle} from "../../../hooks/useDocumentTitle";
 
 export default function KeywordsResults() {
     const keywords = useSearchParams()[0].get("keywords"); //usato per le query, useParams vale per i parametri tipo /:id
+    useDocumentTitle(`Risultati per '${keywords}'`);
 
     const exportPDF = () => {
         //const element = document.getElementById("analysis-content"); // ID del contenuto da esportare

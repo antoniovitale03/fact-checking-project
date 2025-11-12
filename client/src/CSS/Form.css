@@ -27,24 +27,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-    min-height: 100vh;
+    min-height: 50vw;
 }
 
 .page-content form {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
     padding: 4rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3.5vw;
     border-radius: 8%;
     min-width: 20vw;
     background-color: #9c9c9c;
 }
 
 .page-content button {
-    margin-top: 2rem;
-    padding: 0.75rem;
+    padding: 0.75vw;
     border: none;
     border-radius: 20px;
     background-color: #344e41;

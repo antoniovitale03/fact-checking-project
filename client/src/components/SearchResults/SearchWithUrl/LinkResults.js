@@ -6,11 +6,13 @@ import GeneralValutation from "./GeneralValutation";
 import {Box, Button} from "@mui/material";
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import jsPDF from "jspdf"; //Permette di creare PDF dinamici direttamente da testo e componenti HTML (anche grafici e immagini);
-import html2canvas from "html2canvas"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
+import html2canvas from "html2canvas";
+import {useDocumentTitle} from "../../../hooks/useDocumentTitle"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
 
 
 export default function LinkResults() {
-        const link = useSearchParams()[0].get("link");
+    const link = useSearchParams()[0].get("link");
+    useDocumentTitle(`Risultati per '${link}'`);
 
 
         const exportPDF = async () => {

@@ -1,7 +1,8 @@
-import {useState} from "react";
-import {Box, FormControl, InputLabel, Typography, Button, Input, Stack} from "@mui/material";
+import {useEffect, useState} from "react";
+import {Box, Typography, Button, Stack, TextField} from "@mui/material";
 import {Link} from "react-router-dom";
-
+import api from "../../api";
+import "../../CSS/Form.css"
 
 export default function LoginForm({setStep, email, setEmail}) {
 
@@ -17,18 +18,12 @@ export default function LoginForm({setStep, email, setEmail}) {
     }
 
     return (
-        <Box>
+        <Box className="page-content">
             <Box component="form" onSubmit={handleLogin}>
                 <Stack spacing={10}>
                     <Typography variant="h4" sx={{ textAlign: 'center' }}>Login</Typography>
-                    <FormControl>
-                        <InputLabel id="email">Email</InputLabel>
-                        <Input type="email" value={email} onChange={ e => setEmail(e.target.value) } required />
-                    </FormControl>
-                    <FormControl id="password">
-                        <InputLabel id="password">Password</InputLabel>
-                        <Input type="password" value={password} onChange={ e => setPassword(e.target.value) } required />
-                    </FormControl>
+                    <TextField label="Email" type="email" variant="outlined" value={email} onChange={e => setEmail(e.target.value)} />
+                    <TextField label="Password" type="password" variant="outlined" value={password} onChange={e => setPassword(e.target.value)} />
                     <Button type="submit">Login</Button>
                 </Stack>
             </Box>

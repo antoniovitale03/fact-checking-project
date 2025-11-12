@@ -19,7 +19,9 @@ export default function UserMenu(){
 
     const closeMenu = () => setAnchorEl(null);
 
-    const handleLogout = () => setAnchorEl(null); //poi aggiungo l'api per il logout
+    const handleLogout = () => {
+        setAnchorEl(null);
+    }
 
     const menu =
         <Box>

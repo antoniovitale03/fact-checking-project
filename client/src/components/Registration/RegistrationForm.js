@@ -1,6 +1,7 @@
 import {useState} from "react";
-import {Box, Button, FormControl, Input, InputLabel, Stack, Typography} from "@mui/material";
+import {Box, Button, Stack, TextField, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
+import "../../CSS/Form.css";
 
 export default function RegistrationForm({email, setEmail, setStep}){
 
@@ -11,24 +12,14 @@ export default function RegistrationForm({email, setEmail, setStep}){
     const handleRegistration = () => setStep(2);
 
     return(
-        <Box>
+        <Box className="page-content">
             <Box component="form" onSubmit={handleRegistration}>
                 <Stack spacing={10}>
                     <Typography variant="h4" sx={{ textAlign: 'center' }}>Registrazione</Typography>
-                    <FormControl>
-                        <InputLabel htmlFor="username">Nome Utente</InputLabel>
-                        <Input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required/>
-                    </FormControl>
 
-                    <FormControl>
-                        <InputLabel htmlFor="email">Email</InputLabel>
-                        <Input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                    </FormControl>
-
-                    <FormControl>
-                        <InputLabel htmlFor="password">Password</InputLabel>
-                        <Input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
-                    </FormControl>
+                    <TextField label="Username" type="text" variant="outlined" value={username} onChange={e => setUsername(e.target.value)} />
+                    <TextField label="Email" type="email" variant="outlined" value={email} onChange={e => setEmail(e.target.value)} />
+                    <TextField label="Password" type="password" variant="outlined" value={password} onChange={e => setPassword(e.target.value)} />
 
                     {
                         button === "Registrati" ? <Button type="submit" variant="contained">{button}</Button> :

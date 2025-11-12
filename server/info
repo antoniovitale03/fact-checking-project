@@ -1,1 +1,0 @@
-eseguire "uvicorn server:app --reload" nella cartella server per avviare il backend

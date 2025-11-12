@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Box, Typography, Stack, InputLabel, Input, FormControl, Button} from "@mui/material";
-
+import "../../CSS/Form.css"
 export default function ForgotPasswordForm({setStep, email}) {
 
     const [newPassword, setNewPassword] = useState('');
@@ -11,7 +11,7 @@ export default function ForgotPasswordForm({setStep, email}) {
     }
 
     return(
-        <Box component="form" onSubmit={handleSetNewPassword}>
+        <Box component="form" onSubmit={handleSetNewPassword} className="page-content">
             <Stack spacing={10}>
                 <Typography variant="h4">Imposta la nuova password</Typography>
                 <FormControl>

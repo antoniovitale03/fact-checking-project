@@ -8,7 +8,7 @@ export default function Home(){
     useDocumentTitle("Home");
 
     useEffect(() =>{
-        api.get(`http://localhost:8000/api/auth/login`).then(res => console.log(res)).catch(err => console.log(err));
+        api.get(`${process.env.REACT_APP_SERVER}/api/auth/login`).then(res => console.log(res)).catch(err => console.log(err));
         }, []
     )
 
