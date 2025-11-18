@@ -12,3 +12,7 @@ body {
   background-color: transparent;
   box-shadow: none;
 }
+
+#remove-icon:hover {
+  background-color: red;
+}

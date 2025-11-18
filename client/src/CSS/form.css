@@ -35,14 +35,14 @@
     margin-bottom: 3.5vw;
     border-radius: 8%;
     min-width: 20vw;
-    background-color: #9c9c9c;
+    background-color: #e8e8e8;
 }
 
 .page-content button {
     padding: 0.75vw;
     border: none;
     border-radius: 20px;
-    background-color: #344e41;
+    background-color: #0EB1D2;
     color: white;
     font-size: 1rem;
     font-weight: bold;

@@ -7,6 +7,8 @@ export default function GeneralValutation() {
             “L’articolo utilizza un linguaggio fortemente emotivo ma presenta dati verificabili.
             Il tono è schierato, ma le fonti citate risultano attendibili.”
 
+
+
             Aiuta l’utente a interpretare i risultati in chiave etica e critica, non come “verdetti”.
         </p>
     )

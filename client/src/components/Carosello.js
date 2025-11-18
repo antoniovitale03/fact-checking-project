@@ -1,6 +1,9 @@
-export default function Carosello(){
+import {Box, Typography} from "@mui/material";
+
+export default function Carosello({title}){
     return(
-        <p>gestione del carosello in cui mostrare gli ultimi topiccard o articlecard salvati dall'utente
-        (da mostrare nella homePage)</p>
+        <Box>
+            <Typography variant="h4">{title}</Typography>
+        </Box>
     )
 }

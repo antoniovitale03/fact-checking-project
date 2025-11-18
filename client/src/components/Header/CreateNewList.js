@@ -26,7 +26,8 @@ export default function CreateNewList(){
     return(
         <DropDownMenu buttonContent={<><AddIcon />Crea una nuova lista</>}
                       menuContent={menu}
-                      anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
+                      anchorEl={anchorEl}
+                      setAnchorEl={setAnchorEl} />
 
     )
 }

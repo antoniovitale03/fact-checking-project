@@ -1,22 +1,24 @@
 import {Box} from "@mui/material";
 import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 import PersonalStatistics from "./PersonalStatistics";
+import EducativeAdvices from "./EducativeAdvices";
+import Carosello from "../Carosello";
 
 export default function Profile() {
     useDocumentTitle("Profile");
     return(
         <Box>
-            sezione: "ultimi articoli analizzati" (lista di articleCard) -> carosello che riporta alla pagina completa
-            sezione: "ultime ricerche tematiche fatte" (lista di topicCard) -> carosello che riporta alla pagina completa
+            <Carosello title="Ultimi articoli analizzati" />
+            <Carosello title="Ultime ricerche tematiche fatte" />
 
-            sezione: "articoli preferiti" -> carosello con alcuni articoli che punta a FavoritesArticles
-            sezione "tematiche preferite" -> carosello con alcune tematiche che punta a FavoritesTopics
+            <Carosello title="Articoli preferiti" />
+            <Carosello title="Tematiche preferite" />
 
             <PersonalStatistics />
 
-            Componente “Consigli educativi”: messaggi dinamici basati sui dati dell’utente, es.
-            “Hai analizzato molte notizie polarizzanti sull’argomento X:
-            prova a leggere fonti più neutre per bilanciare la tua prospettiva.”
+            <EducativeAdvices />
+
+
 
         </Box>
     )

@@ -1,6 +1,6 @@
 import {useState} from "react";
-import {Box, Typography, Stack, InputLabel, Input, FormControl, Button} from "@mui/material";
-import "../../CSS/Form.css"
+import {Box, Typography, Stack, InputLabel, Input, FormControl, Button, TextField} from "@mui/material";
+import "../../CSS/form.css"
 export default function ForgotPasswordForm({setStep, email}) {
 
     const [newPassword, setNewPassword] = useState('');
@@ -11,25 +11,13 @@ export default function ForgotPasswordForm({setStep, email}) {
     }
 
     return(
-        <Box component="form" onSubmit={handleSetNewPassword} className="page-content">
-            <Stack spacing={10}>
-                <Typography variant="h4">Imposta la nuova password</Typography>
-                <FormControl>
-                    <InputLabel htmlFor="email">Email</InputLabel>
-                    <Input type="email" id="email" value={email} required />
-                </FormControl>
-
-                <FormControl>
-                    <InputLabel htmlFor="newPassword">Nuova password</InputLabel>
-                    <Input type="password" id="newPassword" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required/>
-                </FormControl>
-
-                <FormControl>
-                    <InputLabel htmlFor="confirmNewPassword">Conferma nuova password</InputLabel>
-                    <Input type="password" id="confirmNewPassword" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)} required/>
-                </FormControl>
-                <Button variant="contained" type="submit">Invia</Button>
+            <Stack component="form" spacing={10} onSubmit={handleSetNewPassword}>
+                    <Typography variant="h4">Imposta la nuova password</Typography>
+                    <TextField label="Email" type="email" value={email}  />
+                    <TextField label="Nuova password" type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required />
+                    <TextField label="Conferma nuova password" type="password" value={confirmNewPassword} onChange={(e) => setConfirmNewPassword(e.target.value)}  />
+                    <Button variant="contained" type="submit">Invia</Button>
             </Stack>
-        </Box>
+
     )
 }

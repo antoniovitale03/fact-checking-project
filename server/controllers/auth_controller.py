@@ -1,7 +1,7 @@
 from flask import jsonify
 
 def login():
-    return jsonify("cambio frase")
+    return jsonify("cambio frase di nuovo")
 
 def logout():
     return jsonify("logout")

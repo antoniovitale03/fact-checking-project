@@ -11,11 +11,16 @@ import DropDownMenu from "../DropDownMenu";
 import {useState} from "react";
 
 export default function UserMenu(){
-    const links = ["/", "/profile", "/lists", "/articles", "/topics", "/activity"];
-    const names = ["Home", "Il mio profilo", "Le mie liste", "I miei articoli", "Le mie ricerche tematiche", "Le mie attività"];
-    const icons = [ <HomeIcon />, <PersonIcon />,  <FormatListBulletedIcon />, <NewspaperIcon />, <TopicIcon />, <BoltIcon />];
-
     const [anchorEl, setAnchorEl] = useState(null);
+
+    const menuItems = [
+        {link: '/', name: 'Home', icon: <HomeIcon /> },
+        {link: '/profile', name: 'Il mio profilo', icon: <PersonIcon /> },
+        {link: '/lists', name: 'Le mie liste', icon: <FormatListBulletedIcon /> },
+        {link: '/articles', name: 'I miei articoli', icon: <NewspaperIcon /> },
+        {link: '/topics', name: 'Le mie ricerche tematiche', icon: <TopicIcon /> },
+        {link: '/activity', name: 'Le mie attività', icon: <BoltIcon /> },
+    ]
 
     const closeMenu = () => setAnchorEl(null);
 
@@ -26,9 +31,9 @@ export default function UserMenu(){
     const menu =
         <Box>
             {
-                links.map((link, index) =>
-                <MenuItem key={index} component={Link} to={links[index]} onClick={closeMenu}>
-                    <ListItemIcon>{icons[index]}</ListItemIcon>{names[index]}
+                menuItems.map((e, index) =>
+                <MenuItem key={index} component={Link} to={e.link} onClick={closeMenu}>
+                    <ListItemIcon>{e.icon}</ListItemIcon>{e.name}
                 </MenuItem>
             )}
             <Divider><strong>Preferiti</strong></Divider>

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Box} from "@mui/material";
-import "../../CSS/Form.css";
+import "../../CSS/form.css";
 import RegistrationForm from "./RegistrationForm";
 import VerificationCodeForm from "../VerificationCodeForm";
 import {useDocumentTitle} from "../../hooks/useDocumentTitle";
@@ -13,10 +13,12 @@ export default function HandleRegistration() {
 
     return(
         <Box className="sfondo">
+            <Box className="page-content">
                 {
                     step === 1 ? <RegistrationForm email={email} setEmail={setEmail} setStep={setStep} />
                         : <VerificationCodeForm />
                 }
+            </Box>
         </Box>
     )
 }

@@ -4,7 +4,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import {useNavigate} from "react-router-dom";
 
 export default function SearchBar(){
-
     const navigate = useNavigate();
     const [query, setQuery] = useState("");
 
@@ -18,8 +17,8 @@ export default function SearchBar(){
         }
     };
 
-    const handleSearch = event => {
-        event.preventDefault();
+    const handleSearch = e => {
+        e.preventDefault();
         const param = new URLSearchParams();
         if(isValidUrl(query)){
             param.append("link", query);
@@ -30,12 +29,11 @@ export default function SearchBar(){
         }
         setQuery("");
     }
-
     return(
         <Box component="form" onSubmit={handleSearch} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
             <TextField type="search" placeholder="Inserisci un link o delle parole chiave" value={query} onChange={ e  => setQuery(e.target.value) } sx={{ width: '30vw', gap: 1 }}  />
-            <IconButton onClick={handleSearch}>
-                <SearchIcon />
+            <IconButton onClick={handleSearch} >
+                <SearchIcon  />
             </IconButton>
         </Box>
     )

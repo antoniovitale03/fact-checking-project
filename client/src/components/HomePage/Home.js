@@ -1,11 +1,18 @@
 import SearchBar from "../Header/SearchBar";
 import {useDocumentTitle} from "../../hooks/useDocumentTitle";
-import {Box} from "@mui/material";
-import {useEffect} from "react";
+import {Box, Typography} from "@mui/material";
+import {useEffect, useState} from "react";
 import api from "../../api.js"
+import Carosello from "../Carosello";
+import HowItWorksSection from "./HowItWorksSection";
+import Why from "./Why";
+import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export default function Home(){
     useDocumentTitle("Home");
+
+    const [query, setQuery] = useState("");
 
     useEffect(() =>{
         api.get(`${process.env.REACT_APP_SERVER}/api/auth/login`).then(res => console.log(res)).catch(err => console.log(err));
@@ -14,25 +21,29 @@ export default function Home(){
 
     return(
         <Box>
-            Titolo + slogan
+            Titolo
+            slogan
 
-            campo di ricerca “Inserisci un link o una parola chiave…”
+            <HowItWorksSection />
 
-            sezione "come funziona" (HowItWorks) - UTENTE NON LOGGATO
+            <Why />
 
-            sezione "perchè usare la piattaforma" (Why) -UTENTE NON LOGGATO
+            <Typography component="p">
+                <Link to="/registration" style={{ color: 'black' }}>Crea un account</Link> per salvare le tue analisi e confrontare notizie nel tempo.” - UTENTE NON LOGGATO
+            </Typography>
 
-            “Crea un account gratuito per salvare le tue analisi e confrontare notizie nel tempo.” - UTENTE NON LOGGATO
             <SearchBar />
 
             se l'utente è loggato mostro
             news generali sulla piattaforma, in base alle ricerche fatte dall'utente e dalle tematiche ricercate
-            sezione: "ultimi articoli analizzati" (lista di articleCard)
-            sezione: "ultime ricerche tematiche fatte" (lista di topicCard)
 
-            sezione: "articoli preferiti"
-            sezione "topic preferiti"
+            <Carosello title="Ultimi articoli analizzati" />
+            <Carosello title="Ultime ricerche tematiche fatte" />
 
+            <Carosello title="Articoli preferiti" />
+            <Carosello title="Topic preferiti" />
+
+            <Carosello title="Suggerimenti di lettura" />
             Componente “Suggerimenti di lettura”: articoli correlati a quelli salvati o ricerche simili.
 
         </Box>
