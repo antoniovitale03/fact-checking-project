@@ -7,7 +7,9 @@ import {Box, Button} from "@mui/material";
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import jsPDF from "jspdf"; //Permette di creare PDF dinamici direttamente da testo e componenti HTML (anche grafici e immagini);
 import html2canvas from "html2canvas";
-import {useDocumentTitle} from "../../../hooks/useDocumentTitle"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
+import {useDocumentTitle} from "../../../hooks/useDocumentTitle";
+import {useEffect} from "react";
+import api from "../../../api"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
 
 
 export default function LinkResults() {
@@ -30,6 +32,11 @@ export default function LinkResults() {
             //             pdf.save("analisi_factlens.pdf");
         }
 
+    useEffect(() =>{
+            api.post(`${process.env.REACT_APP_SERVER}/api/analyze/topic`)
+                .then(res => console.log(res)).catch(err => console.log(err));
+        }
+    )
     return (
         <Box>{link}
                 componente che mostra i risultati della ricerca fatta dall'utente, nel caso inserisca direttamente

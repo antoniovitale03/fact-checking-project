@@ -7,10 +7,13 @@ import LanguageAnalysis from "./LanguageAnalysis";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import {useDocumentTitle} from "../../../hooks/useDocumentTitle";
+import {useEffect} from "react";
+import api from "../../../api";
 
 export default function KeywordsResults() {
     const keywords = useSearchParams()[0].get("keywords"); //usato per le query, useParams vale per i parametri tipo /:id
     useDocumentTitle(`Risultati per '${keywords}'`);
+
 
     const exportPDF = () => {
         //const element = document.getElementById("analysis-content"); // ID del contenuto da esportare
@@ -26,6 +29,12 @@ export default function KeywordsResults() {
         //             pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
         //             pdf.save("analisi_factlens.pdf");
     }
+
+    useEffect(() =>{
+        api.post(`${process.env.REACT_APP_SERVER}/api/analyze/topic`)
+            .then(res => console.log(res)).catch(err => console.log(err));
+        }
+    )
 
     return(
         <Box>

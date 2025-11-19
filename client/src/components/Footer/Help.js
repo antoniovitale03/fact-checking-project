@@ -9,6 +9,7 @@ export default function Help(){
     const {showNotification} = useNotification();
 
     const [email, setEmail] = useState("");
+    const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
@@ -20,10 +21,11 @@ export default function Help(){
 
     return(
         <Box className="page-content">
-            <Stack component="form" spacing={10} onSubmit={handleSubmit} >
+            <Stack component="form" spacing={7} onSubmit={handleSubmit}>
                 <Typography variant="h4" sx={{ textAlign: 'center' }}>Contattaci</Typography>
                 <TextField label="La tua email" type="email" variant="outlined" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <TextField label="Messaggio" type="text" rows={10} value={message} onChange={(e) => setMessage(e.target.value)}  />
+                <TextField label="Titolo" type="text" variant="outlined" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <TextField label="Descrizione del problema" type="text" multiline rows={10} value={message} onChange={(e) => setMessage(e.target.value)}  />
                 <Button variant="contained" type="submit">Invia</Button>
             </Stack>
         </Box>

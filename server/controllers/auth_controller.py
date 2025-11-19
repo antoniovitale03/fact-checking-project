@@ -8,3 +8,6 @@ def logout():
 
 def registration():
     return jsonify("registration")
+
+def refresh():
+    return jsonify("refresh")

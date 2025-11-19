@@ -3,8 +3,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import TopicIcon from '@mui/icons-material/Topic';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import BoltIcon from '@mui/icons-material/Bolt';
+import StarIcon from '@mui/icons-material/Star';
+import SettingsIcon from '@mui/icons-material/Settings';
 import {Avatar, Box, Divider, ListItemIcon, MenuItem} from "@mui/material";
 import {Link} from "react-router-dom";
 import DropDownMenu from "../DropDownMenu";
@@ -38,10 +39,17 @@ export default function UserMenu(){
             )}
             <Divider><strong>Preferiti</strong></Divider>
             <MenuItem component={Link} to="/favorites-articles" onClick={closeMenu}>
-                <ListItemIcon><FavoriteIcon /></ListItemIcon>Articoli preferiti
+                <ListItemIcon><StarIcon /></ListItemIcon>I miei articoli preferiti
             </MenuItem>
             <MenuItem component={Link} to="/favorites-topics" onClick={closeMenu}>
-                <ListItemIcon><FavoriteIcon /></ListItemIcon>Tematiche preferite
+                <ListItemIcon><StarIcon /></ListItemIcon>I miei topics preferiti
+            </MenuItem>
+            <Divider><strong>Impostazioni</strong></Divider>
+            <MenuItem>
+                <ListItemIcon><SettingsIcon /></ListItemIcon>Modifica il profilo
+            </MenuItem>
+            <MenuItem>
+                <ListItemIcon><SettingsIcon /></ListItemIcon>Elimina il tuo account
             </MenuItem>
             <Divider />
             <MenuItem key={129} onClick={handleLogout}> LOGOUT </MenuItem>

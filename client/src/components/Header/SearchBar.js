@@ -29,9 +29,10 @@ export default function SearchBar(){
         }
         setQuery("");
     }
+
     return(
         <Box component="form" onSubmit={handleSearch} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-            <TextField type="search" placeholder="Inserisci un link o delle parole chiave" value={query} onChange={ e  => setQuery(e.target.value) } sx={{ width: '30vw', gap: 1 }}  />
+            <TextField type="search" placeholder="Inserisci un link o delle parole chiave..." value={query} onChange={ e  => setQuery(e.target.value) } sx={{ width: '30vw', gap: 1 }}  />
             <IconButton onClick={handleSearch} >
                 <SearchIcon  />
             </IconButton>
