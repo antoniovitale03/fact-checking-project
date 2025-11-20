@@ -7,7 +7,7 @@ import Articles from "./HomePage/Articles";
 import Topics from "./HomePage/Topics";
 
 import About from "./Footer/About";
-import Info from "../components/Footer/Info";
+import QA from "./Footer/Q&A";
 import Credits from "./Footer/Credits";
 import Help from "./Footer/Help";
 import Lists from "./Lists";
@@ -15,7 +15,9 @@ import FavoritesArticles from "./HomePage/FavoritesArticles";
 import FavoritesTopics from "./HomePage/FavoritesTopics";
 import ActivityFeed from "./ActivityFeed";
 import Profile from "./ProfilePage/Profile";
-
+import Archive from "./Header/Archive";
+import ModifyProfile from "./Header/ModifyProfile";
+import DeleteAccount from "./Header/DeleteAccount";
 
 export default function MainContent(){
     return (
@@ -35,9 +37,14 @@ export default function MainContent(){
                 <Route path="/favorites-articles" element={ <FavoritesArticles /> } />
                 <Route path="/favorites-topics" element={ <FavoritesTopics /> } />
 
+                <Route path="/modify-profile" element={ <ModifyProfile /> } />
+                <Route path="/delete-account" element={ <DeleteAccount /> } />
+
+                <Route path="/archive" element={ <Archive /> } />
+
                 {/*Footer*/}
                 <Route path="/about" element={ <About /> } />
-                <Route path="/info" element={ <Info /> } />
+                <Route path="/Q&A" element={ <QA /> } />
                 <Route path="/credits" element={ <Credits /> } />
                 <Route path="/help" element={ <Help /> } />
             </Routes>

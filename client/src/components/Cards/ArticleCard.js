@@ -4,7 +4,7 @@ export default function ArticleCard(){
     return(
         <Card>
             <CardContent>
-                card di un articolo
+                card articolo
             </CardContent>
             {/*
             <ArticleCard

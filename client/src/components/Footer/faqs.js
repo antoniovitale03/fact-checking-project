@@ -90,8 +90,11 @@ export const faqs = [
     {
         question: "Come posso interpretare i risultati di un’analisi tematica?",
         answer: "Guardando la combinazione di punteggi (polarizzazione, sentiment, frequenza di parole chiave) per capire se un tema viene trattato in modo equilibrato o estremizzato."
+    },
+    {
+        question: "Cosa si intend per framing politico?",
+        answer: "risposta"
     }
-
 ]
     {/*
     L'utente può cercare le diverse card con domanda-risposta attraverso delle parole chiave, tipo cercando "polarizzazione" esce:

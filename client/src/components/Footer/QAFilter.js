@@ -1,17 +1,23 @@
 import {Box, IconButton, TextField, Tooltip} from "@mui/material";
 import {useState} from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import CloseIcon from '@mui/icons-material/Close';
+import SearchOffIcon from '@mui/icons-material/SearchOff';
+import {faqs} from "./faqs";
 
-export default function QAFilter({Faqs, setFaqs, cancelSearch}){
+export default function QAFilter({Faqs, setFaqs}){
     const [query, setQuery] = useState("");
     const [closeIcon, setCloseIcon] = useState(false);
 
     const handleSearch = e => {
         e.preventDefault();
         setCloseIcon(true);
-        setQuery("");
         setFaqs(Faqs.filter(faq => faq.question.toLowerCase().includes(query.toLowerCase())));
+    }
+
+    const handleCancelSearch = () => {
+        setCloseIcon(false);
+        setQuery("");
+        setFaqs(faqs);
     }
 
     return(
@@ -19,8 +25,8 @@ export default function QAFilter({Faqs, setFaqs, cancelSearch}){
             {
                 closeIcon &&
                 <Tooltip title="Annulla ricerca">
-                    <IconButton onClick={cancelSearch} id="remove-icon" sx={{ color: 'black' }}>
-                        <CloseIcon />
+                    <IconButton onClick={handleCancelSearch} id="remove-icon" sx={{ color: 'black' }}>
+                        <SearchOffIcon />
                     </IconButton>
                 </Tooltip>
             }

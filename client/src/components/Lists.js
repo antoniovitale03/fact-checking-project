@@ -1,7 +1,8 @@
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import {useDocumentTitle} from "../hooks/useDocumentTitle";
 import {useEffect} from "react";
 import api from "../api";
+import CreateNewList from "./Header/CreateNewList";
 
 export default function Lists(){
     useDocumentTitle("Le mie liste");
@@ -13,6 +14,8 @@ export default function Lists(){
 
     return(
         <Box>
+            <Typography component="h3">Le tue liste</Typography>
+            <CreateNewList />
             pagina che mostra tutte le liste dell'utente (insieme di listCard)
             con la possibilità di rimuovere una o più liste con la X sulla card
         </Box>

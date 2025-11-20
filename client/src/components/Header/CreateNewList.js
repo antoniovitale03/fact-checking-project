@@ -10,7 +10,8 @@ export default function CreateNewList(){
 
     const [anchorEl, setAnchorEl] = useState(null);
 
-    const createNewList = () =>  {
+    const createNewList = (e) =>  {
+        e.preventDefault();
         setAnchorEl(null);
         setListName("");
         api.post(`${process.env.REACT_APP_SERVER}/api/user/lists/add-list`)

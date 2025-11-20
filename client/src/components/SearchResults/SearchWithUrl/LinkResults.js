@@ -9,7 +9,8 @@ import jsPDF from "jspdf"; //Permette di creare PDF dinamici direttamente da tes
 import html2canvas from "html2canvas";
 import {useDocumentTitle} from "../../../hooks/useDocumentTitle";
 import {useEffect} from "react";
-import api from "../../../api"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
+import api from "../../../api";
+import HandleAnalysis from "../../HandleAnalysis"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
 
 
 export default function LinkResults() {
@@ -39,17 +40,13 @@ export default function LinkResults() {
     )
     return (
         <Box>{link}
-                componente che mostra i risultati della ricerca fatta dall'utente, nel caso inserisca direttamente
-            il link della notizia, quindi l'app analizza nello specifico la notizia
-            Struttura:
-
+            <HandleAnalysis />
             <ArticleOverview />
             <LanguageAnalysis />
             <SourcesComparison />
             <GeneralValutation />
             possibilità di salvare l'analisi per poterla aggiungere alla cronologia degli articoli analizzati
                 (articles) e di salvarla in una lista personalizzata o nei preferiti
-            <Button startIcon={<PictureAsPdfIcon />} onClick={exportPDF} variant="contained">Esposta in PDF</Button>
         </Box>
     )
 }

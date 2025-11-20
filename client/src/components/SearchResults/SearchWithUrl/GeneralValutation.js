@@ -1,15 +1,13 @@
+import {Box} from "@mui/material";
+
 export default function GeneralValutation() {
     return(
-        <p>
-            Indice di affidabilità linguistica (es. 78/100)
-            Indice di equilibrio narrativo (quanto bilanciato è il tono tra parti opposte)
-            Breve spiegazione testuale:
-            “L’articolo utilizza un linguaggio fortemente emotivo ma presenta dati verificabili.
-            Il tono è schierato, ma le fonti citate risultano attendibili.”
-
-
-
-            Aiuta l’utente a interpretare i risultati in chiave etica e critica, non come “verdetti”.
-        </p>
+        <Box>
+            <h1>Valutazione generale finale </h1>
+            <p>Breve spiegazione testuale sulla base dei parametri ottenuti nell'analisi</p>
+            <p>Aiuta l’utente a interpretare i risultati in chiave etica e critica</p>
+            <p>Spiegazione all'utente di alcuni dei biasi trovati</p>
+            <p>Es.“Questo paragrafo contiene confirmation bias → spinge il lettore a credere…”</p>
+        </Box>
     )
 }

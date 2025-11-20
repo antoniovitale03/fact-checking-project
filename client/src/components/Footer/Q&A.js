@@ -5,20 +5,15 @@ import {faqs} from "./faqs";
 import {useState} from "react";
 import QAFilter from "./QAFilter";
 
-export default function Info(){
-    useDocumentTitle("Info");
+export default function QA(){
+    useDocumentTitle("QA");
 
     const [Faqs, setFaqs] = useState(faqs);
-
-    const cancelSearch = e => {
-        e.preventDefault();
-        setFaqs(faqs);
-    }
 
     return(
         <Stack spacing={3}>
             <Typography variant="h4">Q&A</Typography>
-            <QAFilter Faqs={Faqs} setFaqs={setFaqs} cancelSearch={cancelSearch} />
+            <QAFilter Faqs={Faqs} setFaqs={setFaqs} />
             {
                 Faqs.map((faq, index) =>
                     <Accordion key={index}>
