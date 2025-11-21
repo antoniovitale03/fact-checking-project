@@ -6,3 +6,6 @@ def add_article():
 
 def delete_article():
     return "rimuovi l'articolo"
+
+def get_article(article_id):
+    return f"ottieni l'articolo con questo id: {article_id} "

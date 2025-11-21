@@ -1,19 +1,21 @@
-import {Card, CardContent} from "@mui/material";
+import {Card, CardContent, IconButton, Tooltip} from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function TopicCard(){
     return(
-        <Card>
-            <CardContent>card di un topic</CardContent>
-            mostra ogni ricerca tematica fatta (per parole chiave)
-            {/*
-            <TopicCard
-              keyword="Immigrazione in Italia"
-              articleCount={12}
-              avgPolarization={0.61}
-              onOpen={() => viewTopicAnalysis(topicId)}
-              onRemove={() => removeFromList(topicId)}
-            />
-            */}
+        <Card sx={{ position: 'relative', overflow: 'visible' }}>
+
+            <Tooltip title="Rimuovi ricerca tematica">
+                <IconButton id="remove-icon" sx={{ position: 'absolute', top: -15, right: -15 }} >
+                    <CloseIcon />
+                </IconButton>
+            </Tooltip>
+
+            <CardContent>
+                <p>keyword</p>
+                <p>lista dei vari parametri</p>
+                <p>data dell'analisi</p>
+            </CardContent>
         </Card>
     )
 }

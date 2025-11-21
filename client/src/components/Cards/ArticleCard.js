@@ -1,24 +1,23 @@
-import {Card, CardContent} from "@mui/material";
+import {Card, CardContent, IconButton, Tooltip} from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function ArticleCard(){
     return(
-        <Card>
-            <CardContent>
-                card articolo
-            </CardContent>
-            {/*
-            <ArticleCard
-                title="Titolo della notizia"
-                source="Corriere della Sera"
-                url="url ufficiale della notizia"
-                sentiment="negativo"
-                polarization={0.78}
-                onView={() => viewAnalysis(articleId)}
-                onRemove={() => removeFromList(articleId)}
-            />
-            */
-            }
+        <Card sx={{ position: 'relative', overflow: 'visible' }}>
 
+            <Tooltip title="Rimuovi articolo">
+                <IconButton id="remove-icon" sx={{ position: 'absolute', top: -15, right: -15 }} >
+                    <CloseIcon />
+                </IconButton>
+            </Tooltip>
+
+            <CardContent>
+                <p>titolo notizia</p>
+                <p>nome della testata</p>
+                <p>autore dell'articolo</p>
+                <p>lista parametri principali</p>
+                <p>data dell'analisi</p>
+            </CardContent>
         </Card>
     )
 }

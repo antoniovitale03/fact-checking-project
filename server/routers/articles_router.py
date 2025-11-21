@@ -13,3 +13,7 @@ def add_articles():
 @router.delete('/delete-article')
 def delete_article():
     return articles_controller.delete_article()
+
+@router.get('/get-article/<article_id>')
+def get_article(article_id):
+    return articles_controller.get_article(article_id)

@@ -1,5 +1,12 @@
+import {Card, CardContent} from "@mui/material";
+
 export default function ActivityCard(){
     return(
-        <p>card di ogni attività dell'utente</p>
+        <Card>
+            <CardContent>
+                card di ogni attività dell'utente
+            </CardContent>
+
+        </Card>
     )
 }

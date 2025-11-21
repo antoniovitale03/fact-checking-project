@@ -13,7 +13,7 @@ import api from "../../../api";
 import HandleAnalysis from "../../HandleAnalysis"; //serve per catturare porzioni del DOM (grafici, card, ecc.) e convertirle in immagini da inserire nel PDF.
 
 
-export default function LinkResults() {
+export default function ArticleAnalysis() {
     const link = useSearchParams()[0].get("link");
     useDocumentTitle(`Risultati per '${link}'`);
 
@@ -41,7 +41,7 @@ export default function LinkResults() {
     return (
         <Box>{link}
             <HandleAnalysis />
-            <ArticleOverview />
+            <ArticleOverview link={link} />
             <LanguageAnalysis />
             <SourcesComparison />
             <GeneralValutation />

@@ -19,6 +19,10 @@ export default function LanguageAnalysis() {
             <p>sensazionalismo (45%)</p>
             <p>overgeneralization (34%)</p>
             <p>grafico a torta che mostra questi dati dei bias</p>
+            <h2>confronto tra realtà e percezione</h2>
+            <p>per alcuni argomenti (come immigrazione, criminalità, economia), posso confrontare cosa dicono i media
+            e cosa dicono i dati ufficiali (es. ISTAT)</p>
+            <p>es. “I media descrivono l’immigrazione come un’emergenza, ma i dati mostrano che X…”</p>
         </Box>
 
     )

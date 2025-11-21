@@ -9,7 +9,7 @@ import {useEffect} from "react";
 import api from "../../../api";
 import HandleAnalysis from "../../HandleAnalysis";
 
-export default function KeywordsResults() {
+export default function TopicAnalysis() {
     const keywords = useSearchParams()[0].get("keywords"); //usato per le query, useParams vale per i parametri tipo /:id
     useDocumentTitle(`Risultati per '${keywords}'`);
 

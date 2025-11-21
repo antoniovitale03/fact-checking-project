@@ -10,14 +10,18 @@ export default function LanguageAnalysis() {
             <h1>Linguaggio manipolativo</h1>
             <p>analisi titolo (indice di clickbait del titolo da 1 a 10)</p>
             <p>classificazione del testo (% di frasi fattuali, opinionistiche, interpretative, ...)</p>
-            <p>evidenziazione di pattern di bias (come "si dice che", “tutti sanno che…”, “gli esperti affermano…”) </p>
             <p>lista di bias trovati come: sensazionalismo (o emotional wording/appeal, parole che suscitano indignazione),
             negativity bias (enfasi su termini nagativi), authority bias ("secondo gli esperti", ...), overgeneralization bias ("tutti
                 "pensano che ...", ...), framing (presentare questioni politiche, leggi o eventi in una certa luce per influenzare l'opinione pubblica e orientare le decisioni, ad esempio
                 chi è presentato come buono o cattivo, chi è vittima e colpevole, come sono definiti gli attori della notizia),
                 bias di conferma, bias di selezione (solo fatti favorevoli), Bias ideologico (anti-immigrazione, pro-green, ecc.)
             </p>
-            <p>per ogni bias trovato mostro le varie frasi nell'articolo + score da 1 a 10</p>
+            <p>per ogni bias trovato evidenzio le frasi manipolative nell'articolo e mostro
+            delle alternative neutrali per fare confronto</p>
+
+            <h3>Manipolazioni visive (tramite immagini nell'articolo)</h3>
+            <p>analisi delle immagini nell'articolo per vedere se sono deepfake, se sono usate fuori contesto, ...</p>
+
             <h1>Polarizzazione</h1>
             <p>definisco uno Polarization Score (da 1 a 10) basato su: linguaggio estremizzato, attacchi a categorie/partiti,
                 presenza di dilemmi noi vs loro, presenza di “nemico” o colpevole, chiamate all’azione emotive</p>
@@ -31,9 +35,6 @@ export default function LanguageAnalysis() {
                 social / opinioni</p>
             <p>presenza di fake news: incongruenze temporali, date mancanti, citazioni non verificabili,
                 affermazioni senza fonte</p>
-            <h1>Analisi della testata giornalistica</h1>
-            <p>valutazione dell'affidabilità (scala da 1 a 10) basata su: orientamento politico noto, trasparenza editoriale, ...</p>
-            <p>classificazione della testata: mainstream, indipendente, blog personale, tabloid, satira, propaganda</p>
         </Box>
     )
 }

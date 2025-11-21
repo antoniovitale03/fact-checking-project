@@ -1,8 +1,8 @@
 import {Container} from "@mui/material";
 import Home from "../components/HomePage/Home";
 import {Route, Routes} from "react-router-dom";
-import KeywordsResults from "./SearchResults/SearchWithKeyword/KeywordsResults";
-import LinkResults from "./SearchResults/SearchWithUrl/LinkResults";
+import TopicAnalysis from "./SearchResults/SearchWithKeyword/TopicAnalysis";
+import ArticleAnalysis from "./SearchResults/SearchWithUrl/ArticleAnalysis";
 import Articles from "./HomePage/Articles";
 import Topics from "./HomePage/Topics";
 
@@ -31,8 +31,8 @@ export default function MainContent(){
                 <Route path="/topics" element={ <Topics /> } />
                 <Route path="/activity" element={ <ActivityFeed /> } />
 
-                <Route path="/analyze/keywords" element={ <KeywordsResults /> } />
-                <Route path="/analyze/link" element={ <LinkResults /> } />
+                <Route path="/analyze/keywords" element={ <TopicAnalysis /> } />
+                <Route path="/analyze/link" element={ <ArticleAnalysis /> } />
 
                 <Route path="/favorites-articles" element={ <FavoritesArticles /> } />
                 <Route path="/favorites-topics" element={ <FavoritesTopics /> } />

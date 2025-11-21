@@ -1,7 +1,7 @@
 import {Box, Button} from "@mui/material";
 import {useDocumentTitle} from "../../hooks/useDocumentTitle";
 import PersonalStatistics from "./PersonalStatistics";
-import EducativeAdvices from "./EducativeAdvices";
+import Report from "./Report";
 import Carosello from "../Carosello";
 import {useEffect} from "react";
 import api from "../../api";
@@ -38,7 +38,7 @@ export default function Profile() {
 
 
 
-            <EducativeAdvices />
+            <Report />
 
 
         </Box>

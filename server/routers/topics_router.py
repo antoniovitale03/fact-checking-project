@@ -13,3 +13,7 @@ def add_topic():
 @router.delete('/delete-topic')
 def delete_topic():
     return topics_controller.delete_topic()
+
+@router.get('/get-topic/<topic_id>')
+def get_topic(topic_id):
+    return topics_controller.get_topic(topic_id)

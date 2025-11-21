@@ -39,7 +39,7 @@ export default function Home(){
             <Carosello title="Topic preferiti" />
 
             <Carosello title="Suggerimenti di lettura" />
-            Componente “Suggerimenti di lettura”: articoli e topic correlati a quelli salvati o ricerche simili.
+            <p> articoli e topic correlati a quelli salvati, più neutrali che permettano di contrastare la polarizzazione</p>
 
         </Box>
     )
